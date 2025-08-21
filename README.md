@@ -1,36 +1,27 @@
 
-# Movies Trends Analysis — Python
+# Bank Loan Analysis — Python Project
 
 ## 🎯 Objective
-The primary objective of this project is to explore and understand trends in the movie industry by analyzing various attributes such as ratings, genres, and revenue. By leveraging data analysis and visualization techniques, the project aims to uncover patterns and correlations that can provide insights into factors influencing movie success.
+The goal of this project is to analyze key performance indicators (KPIs) from a bank’s loan dataset to assess lending performance, borrower behavior, and loan quality. By examining metrics such as funded amounts, repayment totals, interest rates, and debt-to-income ratios, the project provides insights into financial health and risk exposure.
 
 ## 📋 Overview
-This project analyzes movie trends using a dataset that includes ratings, genres, and revenue.
+This analysis focuses on:
+- **Loan Application Trends**: Total and Month-to-Date (MTD) applications.
+- **Funded Amounts**: Total and MTD disbursements.
+- **Repayment Performance**: Total and MTD amounts received.
+- **Interest & DTI Metrics**: Average interest rates and borrower debt-to-income ratios.
+- **Loan Quality Breakdown**:
+  - **Good Loans**: Fully paid loans with repayment success.
+  - **Bad Loans**: Charged-off loans indicating default risk.
 
-### Key Analyses:
-- **Ratings Distribution**: Analyzes the distribution of movie ratings.
-- **Genre Popularity**: Identifies the most popular genres.
-- **Revenue Trends**: Explores trends in movie revenues.
-- **Correlation Analysis**: Investigates correlations between different movie attributes.
+## 📌 Key Findings
+- **13.8%** of loans are classified as bad (Charged Off).
+- **83.3%** are good loans (Fully Paid).
+- **Average Interest Rate**: ~12.05%
+- **Average DTI**: ~13.33%
+- **Top 10% of loans** contribute significantly to total repayments.
 
-## 🔍 Key Findings
-### Ratings Distribution
-- Majority of movies are rated between 6 and 8.
-- Around 50% of movies have ratings between 6 and 7.
-
-### Genre Popularity
-- Drama: ~20% of total movies.
-- Comedy and Action: ~15% each.
-
-### Revenue Trends
-- Higher budget movies generate more revenue.
-- Top 10% revenue-generating movies account for nearly 70% of total revenue.
-
-### Correlation Analysis
-- Moderate positive correlation (~0.5) between budget and revenue.
-- Weaker correlation (~0.2) between ratings and revenue.
-
-## 🧠 Skills and Methods Used
+## 🧠 Skills & Tools Used
 ### Data Analysis
 - Data Cleaning and Preprocessing
 - Descriptive Statistics
@@ -42,7 +33,7 @@ This project analyzes movie trends using a dataset that includes ratings, genres
 ### Statistical Analysis
 - Correlation Analysis
 
-### Programming Languages
+### Programming Language
 - Python
 
 ### Libraries
@@ -51,9 +42,16 @@ This project analyzes movie trends using a dataset that includes ratings, genres
 - Matplotlib
 - Seaborn
 
-## 📂 Files
-- `movies_trends_analysis.ipynb`: Main analysis notebook
+## 📁 Files
+- `loan_kpi_analysis.py`: Main script for KPI computation
+- `financial_loan.xlsx`: Input dataset
 - `README.md`: Project documentation
 
-## 📌 Notes
-For more details, you can view the full notebook in this repository.
+## 🚀 Usage
+Place `financial_loan.xlsx` in the same directory and run:
+```bash
+python loan_kpi_analysis.py
+```
+
+## 📎 Notes
+Ensure the Excel file has the correct format with columns like `issue_date`, `loan_status`, `loan_amount`, `total_payment`, `int_rate`, and `dti`.
